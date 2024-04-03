@@ -11,5 +11,5 @@ RUN export DEBIAN_FRONTEND=noninteractive && apt install curl default-jre -y
 RUN echo 'deb http://download.opensuse.org/repositories/home:/cabelo/xUbuntu_20.04/ /' | tee /etc/apt/sources.list.d/home:cabelo.list
 RUN curl -fsSL https://download.opensuse.org/repositories/home:cabelo/xUbuntu_20.04/Release.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/home_cabelo.gpg > /dev/null
 RUN apt update
-RUN apt install owasp-zap
+# RUN apt install owasp-zap
 RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
